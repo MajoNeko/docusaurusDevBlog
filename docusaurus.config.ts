@@ -106,6 +106,10 @@ const config: Config = {
               label: 'Tutorial',
               to: '/docs/guides/intro',
             },
+             {
+              label: 'Projects',
+              to: '/docs/projects/overview',
+            },
           ],
         },
         {
