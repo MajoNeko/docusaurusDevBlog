@@ -15,9 +15,6 @@ This repository hosts a developer blog built with Docusaurus. It includes tools 
     - [Prerequisites](#prerequisites)
   - [Repository Structure](#repository-structure)
   - [Deployment](#deployment)
-    - [Deploy to Github Pages](#deploy-to-github-pages)
-    - [Deploying using NGINX](#deploying-using-nginx)
-    - [Contributing](#contributing)
 
 ## Quickstart
 
@@ -77,28 +74,5 @@ New content can be added as follows:
 
 ## Deployment
 
-### Deploy to Github Pages
-
-To deploy using SSH:
-
-```
-$ USE_SSH=true npm run deploy
-```
-
-To deploy without using SSH, run:
-
-```
-$ GIT_USER=<Your GitHub username> npm run deploy
-```
-
-If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
-
-### Deploying using NGINX
-
-To deploy the site using NGINX and Docker, follow this [guide](./docs/guides/deploy-docusaurus-with-docker-and-nginx.md)
-
-### Contributing
-
-Currently, this project does not seek collaborators, but we're open to suggestions regarding enhancements or guides to prepare.
-Open an issue with a detailed description on the change you suggest and elaborate why it's benefitial for the project and vast majority.
-If accepted in the discussion, open a pull request from your fork of this repository to contribute your changes.
+This website is automatically deployed to Github Pages using a pre-configured Github Actions Workflow. The setup can be found within the repositories settings under the "code,planning, and automation" section.
+Github Actions is a CI/CD platform that allows you to automate the build, test and deployment pipeline. When a change is commited to the repository, the changes are automatically deployed. 
