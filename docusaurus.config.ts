@@ -126,7 +126,7 @@ const config: Config = {
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} Sven Patrick Meier (spmse). Built with Docusaurus and 💚.`,
+      copyright: `Copyright © ${new Date().getFullYear()} Rita Jane Marques de Lima (MajoNeko). Built with Docusaurus and 💚. Extended from the developer-akademie-starter.`,
     },
     prism: {
       theme: prismThemes.github,
