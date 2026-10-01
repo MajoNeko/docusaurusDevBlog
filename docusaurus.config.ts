@@ -118,8 +118,8 @@ const config: Config = {
             {
               label: 'GitHub',
               href: 'https://github.com/MajoNeko/docusaurusDevBlog',
-            }
-             {
+            },
+            {
               label: 'Template',
               href: 'https://github.com/Developer-Akademie-DevSecOpsKurs/dev-blog-template',
             }
