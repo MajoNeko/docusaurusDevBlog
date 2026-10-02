@@ -6,6 +6,24 @@ Guide: [PDF Checklist](https://github.com/MajoNeko/VServer/blob/main/Docs/Git_VS
 
 In this walkthrough you will learn how to setup SSH keys on a virtual server, disable password authentication in favour of using SSH authentication, installing and configuring a web server and setting up a Git account with username, email and SSH key on your server.
 
+# Table of Contents
+
+0. [**Introduction**](#V-Server-Setup)
+   - Overview of the guide  
+
+1. [**Setup SSH Key Pair**](#Step-1-Generate-an-SSH-key-pair)
+   - Create and use a secure SSH key  
+
+2. [**Disable Password Logins**](#Disable-Password-logins)
+   - Disable password logins for secure SSH authentication 
+
+3. [**Setup Nginx**](#Setup-Nginx)
+   - Install and Configure Nginx
+
+4. [**Setup Git**](#Setup-Git)
+   - Install and Configure Git
+
+
 ## Setup and copy SSH keys
 
 ### Step 1 - Generate an SSH key pair 
@@ -158,3 +176,49 @@ You can now see the new alternative HTML start page by entering the IP address w
 ```bash
     http://ip-address:8081/
 ```
+## Setup Git
+
+### Step 1 - Install Git
+Install Git using the following command:
+```bash
+sudo apt install git -y
+```
+
+### Step 2 - Setup User setup
+Setup your username using the following command:
+```bash
+git config --global user.name "User Name"
+```
+And you email:
+```bash
+git config --global user.email "user@email.com"
+```
+> [!Note]
+> -y (yes) confirms the installation
+
+### Step 2 - Generate SSH key for Git
+Generate an SSH key as previously described in [**Setup and copy SSH keys - Step 1**](#Step-1-Generate-an-SSH-key-pair)
+
+### Step 3 - Copy your public key
+
+Open your public key using the cat editor:
+```bash
+cat /c/Users/UserName/.ssh/your-key-name.pub
+```
+and copy the key information.
+
+### Step 4 - Add your key to Git
+
+Go to your github profile and in the settings, clicks on SSH and GPG keys. Select New SSH key. Give it a title, such as "Virtual Server github key" and paste the key into the key field. Click on Add SSH key to complete the setup.
+
+
+## Conclusion
+
+### Congratulations, you have now completed the introduction to setting up a Virtual Server.
+#### By reaching the end of this walkthrough, you should now be able to achieve the following:
+    - Create and use SSH keys for secure authentication
+    - Disable password authentication for a more secure login process using SSH keys
+    - Install, configure, and manage an Nginx web server
+    - Using custom web pages on your server
+    - Setting up your username and email as well as an SSH key for Git and Git hub
+#### Your server is now ready to be used for whatever you can imagine, be it hosting websites or deploying applications or just tinkering around to see what else you can achieve.
