@@ -53,3 +53,34 @@ Copy your SSH public key to the authorized_key file using the following command:
 ```bash
     ssh -i C:/Users/user-directory/.ssh/id_ed25519_VServer user@ip-address
 ```
+
+## Disable Password logins
+
+### Step 1 - Open the config file
+Open the config file for editing using the following command:
+```bash
+    sudo nano etc/ssh/sshd_config
+```
+
+### Step 2 - Changing Password authentication configuration
+Find and edit the line:
+```bash 
+    "#PasswordAuthentication yes" 
+```
+change it to
+```bash
+    "PasswordAuthentication no"
+```
+Save ('Ctrl + O') and exit ('Ctrl + X') the file
+
+### Step 3 - Restart the service
+Restarting the sshd service to reload the config changes.
+To restart the service use the command:
+```bash
+    sudo systemctl restart ssh.service
+```
+
+### Step 4 - Test the Configuration
+Logout and attempt to login with user name and password. If all went well you should receive a Permission denied (publickey) messgae which tells you that you need to use your public key to login.
+You can now securely login using your SSH key as demonstrated in 
+[**Setup and copy SSH keys - Step 6**](#Step-6-Test-your-connection-using-the-SSH-key:)
