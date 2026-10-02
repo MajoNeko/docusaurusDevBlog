@@ -15,7 +15,7 @@ const config: Config = {
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
-  url: process.env.DEPLOYMENT_URL ?? "https://majoneko.github.io/",
+  url: process.env.DEPLOYMENT_URL ?? "https://github.com/",
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: process.env.BASE_URL ?? "/",
@@ -75,7 +75,7 @@ const config: Config = {
 
   themeConfig: {
     // Replace with your project's social card
-    image: 'img/RJL.png', //temporary, TBD
+    image: 'img/docusaurus-social-card.jpg',
     navbar: {
       title: 'Rita Lima Developer Blog',
       logo: {
