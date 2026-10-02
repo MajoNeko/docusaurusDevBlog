@@ -65,7 +65,7 @@ Copy your SSH public key to the authorized_key file using the following command:
 > [!Note]
 > -i stands for identity
 
-### Step 5 - Test your connection using the SSH key:
+### Step 5 - Test your connection using the SSH key
 ```bash
     ssh -i C:/Users/user-directory/.ssh/id_ed25519_VServer user@ip-address
 ```
@@ -99,7 +99,7 @@ To restart the service use the command:
 ### Step 4 - Test the Configuration
 Logout and attempt to login with user name and password. If all went well you should receive a Permission denied (publickey) messgae which tells you that you need to use your public key to login.
 You can now securely login using your SSH key as demonstrated in 
-[**Setup and copy SSH keys - Step 6**](#Step-6---Test-your-connection-using-the-SSH-key:)
+[**Setup and copy SSH keys - Step 5**](#Step-5-Test-your-connection-using-the-SSH-key)
 
 ## Setup Nginx
 
