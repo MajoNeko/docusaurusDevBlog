@@ -5,6 +5,7 @@ This website is built using [Docusaurus](https://docusaurus.io/), a modern stati
 ## Repository Description
 
 This repository hosts a developer blog built with Docusaurus. It includes tools and scripts for creating, managing, and deploying static web content. The software supports rapid local development, customizable theming, and seamless deployment to platforms like GitHub Pages or NGINX.
+This section will be personalised and updated with more information as more projects are completed
 
 ## Table of Contents
 
@@ -47,11 +48,7 @@ This repository hosts a developer blog built with Docusaurus. It includes tools 
 
 4. Deployment
 
-   In order to deploy onto Github Pages, ensure that your `docusaurus.config.ts` conforms with the [documentation guidelines](https://docusaurus.io/docs/deployment#deploying-to-github-pages). After that is ensured run the following command to deploy:
-
-   ```
-   $ USE_SSH=true npm run deploy
-   ```
+   In order to deploy onto Github Pages, ensure that your `docusaurus.config.ts` conforms with the [documentation guidelines](https://docusaurus.io/docs/deployment#deploying-to-github-pages). 
 
 For detailed information about deploying this Docusaurus project, refer to the [Deployment](#deployment) section below.
 
