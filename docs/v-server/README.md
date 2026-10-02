@@ -6,8 +6,6 @@ Guide: [PDF Checklist](https://github.com/MajoNeko/VServer/blob/main/Docs/Git_VS
 
 In this walkthrough you will learn how to setup SSH keys on a virtual server, disable password authentication in favour of using SSH authentication, installing and configuring a web server and setting up a Git account with username, email and SSH key on your server.
 
-
-
 ## Setup and copy SSH keys
 
 ### Step 1 - Generate an SSH key pair 
@@ -84,3 +82,79 @@ To restart the service use the command:
 Logout and attempt to login with user name and password. If all went well you should receive a Permission denied (publickey) messgae which tells you that you need to use your public key to login.
 You can now securely login using your SSH key as demonstrated in 
 [**Setup and copy SSH keys - Step 6**](#Step-6-Test-your-connection-using-the-SSH-key:)
+
+## Setup Nginx
+
+### Step 1 - Update the system
+Update the server to prepare for the webserver installation:
+```bash
+        sudo apt update
+```
+
+### Step 2 - Install Nginx
+Install the Nginx webserver using the following command:
+```bash
+sudo apt install nginx -y
+```
+> [!Note]
+> -y (yes) confirms the installation
+
+
+### Step 3 - Verify Nginx status
+To check if Nginx is running use the following command:
+```bash
+systemctl status nginx.service
+```
+If you enter your Virtual Servers IP address in the browser you should now see the default Nginx HTML starting page
+
+### Step 4 - Create an alternative starting page
+Create a new directory for the alternative HTML page
+```bash
+    sudo mkdir /var/www/alternatives
+```
+Create the HTML file:
+```bash
+    sudo touch /var/www/alternatives/alternate-index.html
+```
+Edit the HTML file:
+```bash
+    sudo nano /var/www/alternatives/alternate-index.html
+```
+
+### Step 5 - Configure Nginx
+We now need to create a configuration file for the alternative page
+```bash
+    sudo nano /etc/nginx/sites-enabled/alternatives  
+```
+Sample configuration:
+```bash
+    server {
+        listen 8081;
+        listen [::]:8081;
+        root /var/www/alternatives;
+        index alternate-index.html;
+
+        location / {
+            try_files $uri $uri/ =404;
+        }
+    }  
+```
+> [!Note]
+>  try_files $uri $uri/ =404; if a page name is not found within the given structure a 404 page not found page will be displayed instead
+
+### Step 6 - Restart Nginx
+After completing any changes to the config or HTML files, you must restart the Nginx server for the changes to take effect
+```bash
+    sudo service nginx restart
+```
+> [!Note]
+>  after restarting you can check the status of the service using the command from step 3:
+> ```bash
+>       systemctl status nginx.service
+> ```
+
+### Step 7 - Test the changes
+You can now see the new alternative HTML start page by entering the IP address with the port defined inthe config file:
+```bash
+    http://ip-address:8081/
+```
