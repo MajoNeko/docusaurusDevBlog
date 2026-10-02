@@ -33,7 +33,7 @@ function HomepageHeader() {
     </header>
   );
 }
-
+// TODO: Replace with personalised content in the future
 export default function Home(): JSX.Element {
   const {siteConfig} = useDocusaurusContext();
   return (

@@ -31,7 +31,14 @@ Checkout this repository to see the code/implementation
     - Fill out the document in README.md style describing the steps taken
     - Modify as needed
 
-4. Deploy and test the project
+4. Alter the docusaurus.config.ts file to be personalised
+    - Change the title and tagline to something personal
+    - Change any URLs to point to personalised URLs such as you personal github repository
+    - Change the footer information to contain only relevant links to the current proejct on this blog and any URL informationto personal links
+
+5. Don't forget to create and fill out the README.md with relevant information regarding the proejct!
+
+6. Deploy and test the project
 
 ## Description
 

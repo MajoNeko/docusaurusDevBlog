@@ -7,7 +7,7 @@ dotenvconfig();
 
 /* TODO: change to read configuration from environment */
 const blogEnabled = Boolean(process.env.BLOG_ENABLED === 'true')
-const gitRepoURL = process.env.GIT_REPOSITORY_URL ?? "/"
+const gitRepoURL = process.env.GIT_REPOSITORY_URL ?? "https://github.com/MajoNeko/docusaurusDevBlog"
 
 const config: Config = {
   title: 'Ritas Docusaurus Developer blog',
@@ -15,7 +15,7 @@ const config: Config = {
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
-  url: process.env.DEPLOYMENT_URL ?? "https://github.com/",
+  url: process.env.DEPLOYMENT_URL ?? "https://majoneko.github.io",
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: process.env.BASE_URL ?? "/",
