@@ -19,12 +19,6 @@ function HomepageHeader() {
         <div className={styles.buttons}>
           <Link
             className="button button--secondary button--lg"
-            to="/docs/guides/intro">
-            Docusaurus Tutorial - 5min ⏱️
-          </Link>
-          <></>
-          <Link
-            className="button button--secondary button--lg"
             to="/docs/projects/overview">
             To my Projects
           </Link>
@@ -33,7 +27,7 @@ function HomepageHeader() {
     </header>
   );
 }
-
+// TODO: Replace with personalised content in the future
 export default function Home(): JSX.Element {
   const {siteConfig} = useDocusaurusContext();
   return (
