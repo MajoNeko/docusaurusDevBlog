@@ -1,6 +1,5 @@
 # V-Server Setup
 Create a test Virtual Server for learning purposes
-(loom intro link https://www.loom.com/share/3f5aaa8fc3f2492cb031a0f775497776)
 
 Guide: [PDF Checklist](https://github.com/MajoNeko/VServer/blob/main/Docs/Git_VServer_Checkliste.pdf)
 
