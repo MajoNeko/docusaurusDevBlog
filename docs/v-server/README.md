@@ -4,6 +4,7 @@ Create a test Virtual Server for learning purposes
 Guide: [PDF Checklist](https://github.com/MajoNeko/VServer/blob/main/Docs/Git_VServer_Checkliste.pdf)
 
 In this walkthrough you will learn how to setup SSH keys on a virtual server, disable password authentication in favour of using SSH authentication, installing and configuring a web server and setting up a Git account with username, email and SSH key on your server.
+This is for educational purposes only.
 
 # Table of Contents
 
@@ -22,13 +23,14 @@ In this walkthrough you will learn how to setup SSH keys on a virtual server, di
 4. [**Setup Git**](#Setup-Git)
    - Install and Configure Git
 
+## Quickstart
 
 ## Setup and copy SSH keys
 
 ### Step 1 - Generate an SSH key pair 
 In the terminal type the following: 
 ```bash
-ssh-keygen -t ed25519 -f C:/Users/user-directory/.ssh/id_ed25519_VServer -C "key name comment"
+ssh-keygen -t ed25519 -f ~/.ssh/id_ed25519_VServer -C "key name comment"
 ```
 > [!Note]
 > -t ed25519 : This will generate a new SSH key pair using Ed25519 key type (recommended as it is faster, shorter and has better security properties).
@@ -59,14 +61,14 @@ If you are able to connect to the server then you can log off and move on to the
 ### Step 4 - Copying your SSH key
 Copy your SSH public key to the authorized_key file using the following command:
 ```bash
-    ssh-copy-id -i C:/Users/user-directory/.ssh/id_ed25519_VServer.pub user@ip-address
+    ssh-copy-id -i ~/.ssh/id_ed25519_VServer.pub user@ip-address
 ```
 > [!Note]
 > -i stands for identity
 
 ### Step 5 - Test your connection using the SSH key
 ```bash
-    ssh -i C:/Users/user-directory/.ssh/id_ed25519_VServer user@ip-address
+    ssh -i ~/.ssh/id_ed25519_VServer user@ip-address
 ```
 
 ## Disable Password logins
@@ -202,7 +204,7 @@ Generate an SSH key as previously described in [**Setup and copy SSH keys - Step
 
 Open your public key using the cat editor:
 ```bash
-cat /c/Users/UserName/.ssh/your-key-name.pub
+cat ~/.ssh/your-key-name.pub
 ```
 and copy the key information.
 
