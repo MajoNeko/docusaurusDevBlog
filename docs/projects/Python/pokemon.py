@@ -7,6 +7,9 @@ class Pokemon:
     def __str__(self):
          return f"Name: {self.__name}\nHealth: {self.__health}\nLevel {self.__level}" # creats an automated structure for printing an object
 
+    def __gt__(self,other): # defines a greater than method to compare class instances
+         return self.__level>other.__level
+
     def introduction(self): # pokemon introduction method
         print(f"{self.__name}, {self.__name}!")
 
