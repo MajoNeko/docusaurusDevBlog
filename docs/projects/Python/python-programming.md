@@ -14,6 +14,8 @@ Basics of python programming
 
 3. - once it finnishes installation, you should now be able to run python from the command prompt by typing "python" in the powershell window.
 
+4. - If you are using VSCode, you can install the python extension from the extensions tab
+
 ## Environment variables
 
 In windows, environment variables are dynamic, named, text values that store system and application configuration settings outside of code and scripts. They are esentially a name (for example USERNAME) mapped to a value (for example "Mary"). This name can then be used by the OS and other programs to act as shortcuts to dynamic paths such as %USERPROFILE% (which changes depending on the current user profile), the PATH variable, which is used to tell the command line where to find program executables and store configurations or secure keys without having them in the source files.
